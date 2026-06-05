@@ -9,7 +9,7 @@
 
 ## Why I chose Log Analysis
 
-Log Analysis is the single most operationally relevant CTF category for the career path I am targeting: entry-level SOC Analyst and IT Help Desk. In a real SOC environment, Tier 1 analysts spend the majority of their shift reviewing logs inside a SIEM (Security Information and Event Management) platform such as Splunk, Microsoft Sentinel, or IBM QRadar. Every alert they triage is ultimately a log entry. Choosing this category is a direct investment in job-ready skills rather than purely competitive CTF skills.
+Log Analysis is the single most operationally relevant CTF category for the career path I am targeting: entry-level SOC Analyst and IT Help Desk. In a real SOC environment, Tier 1 analysts spend the majority of their shift reviewing logs inside a SIEM (Security Information and Event Management) platform such as Splunk, Microsoft Sentinel, or IBM QRadar. Every alert they triage is ultimately a log entry. Choosing this category is a direct investment in job-ready skills rather than purely competitive CTF skills.h
 
 Additionally, the analytical reasoning required to find an anomaly in a log file; identifying the one suspicious event among thousands of normal ones; is a pattern-recognition skill that transfers directly to real-world threat detection.
 
@@ -124,7 +124,7 @@ source="Category_04_Log_Analysis Challenge 04.log" sourcetype=ms:iis:auto
 
 **PowerShell cross-validation:**
 ```powershell
-(Get-Content "C:\path\to\challenge.log" | Select-String -Pattern "Mozilla" -AllMatches).Matches.Count
+(Get-Content "the path to my download folder for the CTF file" | Select-String -Pattern "Mozilla" -AllMatches).Matches.Count
 ```
 
 **Why `mvcount(split(_raw,...)) - 1` works:** `split()` divides a string by a delimiter and returns a multivalue field. If "Mozilla" appears 3 times in a line, split creates 4 pieces; `mvcount()` returns 4; subtract 1 to get 3 actual occurrences. This pattern counts occurrences anywhere in raw text, even if the field is not natively extracted.
