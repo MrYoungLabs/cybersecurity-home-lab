@@ -129,7 +129,7 @@ source="Category_04_Log_Analysis Challenge 04.log" sourcetype=ms:iis:auto
 
 **Why `mvcount(split(_raw,...)) - 1` works:** `split()` divides a string by a delimiter and returns a multivalue field. If "Mozilla" appears 3 times in a line, split creates 4 pieces; `mvcount()` returns 4; subtract 1 to get 3 actual occurrences. This pattern counts occurrences anywhere in raw text, even if the field is not natively extracted.
 
-**Status:** Verified by answer checker. Total count: 12,155.
+**Status:** Verified by answer checker.
 
 ---
 
@@ -148,7 +148,7 @@ source="Category_04_Log_Analysis Challenge 05.log" sourcetype=ms:iis:auto
 
 **Note on the expression-based approach:** Because IIS logs have a native `c_ip` field for client IP, an alternative approach is `| stats count by c_ip` and then reading the row for 192.168.1.50. Both produce the same result, but the `eval + split` approach is more portable to log types without named IP fields.
 
-**Status:** Verified by answer checker. Total count: 12,088.
+**Status:** Verified by answer checker.
 
 ---
 
@@ -219,7 +219,7 @@ source="Category_04_Log_Analysis Challenge 08.log" sourcetype=ms:iis:auto
 
 **Log type:** SMTP log (IIS SMTP service)
 **Objective:** Find the full username string that was used in the SMTP authentication attempt.
-**Approach:** SMTP authentication logs record the AUTH command and the Base64-encoded credentials. The challenge required identifying the login attempt in the SMTP log. Splunk's `iplocation` and text search were used to locate the AUTH event.
+**Approach:** SMTP authentication logs record the AUTH command and the Base64-encoded credentials. The challenge required identifying the login attempt in the SMTP log. Text search was used to locate the AUTH event.
 
 **Important upload note:** SMTP logs must be uploaded with the `generic_single_line` sourcetype using the "Every Line" event break setting. Using `misc` or `misc_text` collapses the entire file into 2 events; `generic_single_line` produces one event per log line, giving correct search results (376,000+ events for this log file).
 
@@ -242,15 +242,15 @@ source="Category_04_Log_Analysis Challenge 09.log" sourcetype=generic_single_lin
 
 **SPL query used:**
 ```spl
-source="Category_04_Log_Analysis Challenge 10 (3).log" sourcetype=generic_single_line
+source="Category_04_Log_Analysis Challenge 10.log" sourcetype=generic_single_line
 _raw="*235*"
 | rex field=_raw "(?P<log_time>\d{2}:\d{2}:\d{2}\.\d+)"
 | table _raw, log_time
 ```
 
-**Answer format lesson learned:** The answer must be submitted exactly as it appears in the raw log. The SMTP log uses a dot (.) as the separator before milliseconds: `HH:MM:SS.mmm`. Submitting with a colon before the milliseconds (`HH:MM:SS:mmm`) was rejected. Always copy the timestamp directly from `_raw` rather than reformatting it.
+**Answer format lesson learned:** The answer must be submitted exactly as it appears in the raw log. The SMTP log uses a dot (.) as the separator before milliseconds. Submitting with a colon before the milliseconds was rejected. Always copy the timestamp directly from `_raw` rather than reformatting it.
 
-**Status:** Verified by answer checker. Answer format: XX:XX:XX.XXX (dot before milliseconds).
+**Status:** Verified by answer checker. Answer format: HH:MM:SS.mmm (dot before milliseconds, not colon).
 
 ---
 
