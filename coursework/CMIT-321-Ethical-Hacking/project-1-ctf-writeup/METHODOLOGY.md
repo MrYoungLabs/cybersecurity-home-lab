@@ -43,7 +43,7 @@ Each challenge on the UMGC CTF page provides a specific log file to download. Th
 
 ### Step 2: Determine the correct sourcetype
 
-This was the most critical configuration decision for each challenge. The wrong sourcetype produces malformed events, incorrect field extraction, and inaccurate search results.
+This was the most critical configuration decision for each challenge. The wrong sourcetype produces malformed events, incorrect field extraction, and inaccurate search result.
 
 Two sourcetypes were used across all 10 challenges:
 
@@ -100,7 +100,7 @@ My initial approach to SPL was to look up commands individually and try to const
 
 2. **Use _raw as a fallback.** If a field is not extracted, the full original log line is always available in _raw. Commands like rex and split work on _raw when named fields are not available.
 
-3. **Build incrementally.** Write the simplest version of the query that returns any results, then add pipes to transform the output toward the answer. Never write a 5-pipe query from scratch.
+3. **Build incrementally.** Write the most simplest version of the query that returns any results, then add pipes to transform the output toward the answer. Never write a 5-pipe query from scratch.
 
 4. **The split-and-count pattern for occurrence counting:**
 
