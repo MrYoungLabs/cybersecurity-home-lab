@@ -23,7 +23,7 @@ The most operationally significant lesson from this project was how a misconfigu
 
 ### Lesson 2: Normal events and attack events coexist in the same log
 
-In Challenge 07 (FTP brute force), the log contained normal anonymous FTP sessions mixed in with the brute force attack. The first successful login (FTP 230) in the log was a normal session, not the attack. Submitting the wrong timestamp was an easy mistake to make without reading the context around the event.
+In Challenge 07 (FTP brute force), the log contained normal anonymous FTP sessions mixed in with the brute force attack. The first successful login (FTP 230) in the log was a normal session, not the attack. Submitting the wrong timestamp was an easy mistake to make without reading the context around the event, since their was no clear separator between sessions. was an easy mistake to make without reading the context around the event.
 
 **Implication for career:** Alert triage in a SOC requires understanding what normal looks like on a given system. A 230 FTP response is not inherently an attack signal. The attack was identifiable only because of the sequence: many 530 failures for a specific username, followed by a 230. Context is everything in log analysis.
 
