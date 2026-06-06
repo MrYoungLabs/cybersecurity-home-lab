@@ -1,4 +1,4 @@
-# Tools and Resources — Project 1
+# Tools and Resources: Project 1
 
 A running list of tools, techniques, and reference sites used (or considered) while working through the CTF write-up.
 
@@ -40,12 +40,12 @@ A running list of tools, techniques, and reference sites used (or considered) wh
 
 ## Reference sites
 
-- [HackTricks](https://book.hacktricks.xyz/) — broad attacker-perspective reference
-- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) — categorized payload library
-- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) — defender-perspective reference
-- [GTFOBins](https://gtfobins.github.io/) — Unix binaries for privilege escalation
-- [LOLBAS](https://lolbas-project.github.io/) — Windows living-off-the-land binaries
-- [CTF Field Guide](https://trailofbits.github.io/ctf/) — introductory CTF methodology
+- [HackTricks](https://book.hacktricks.xyz/): broad attacker-perspective reference
+- [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings): categorized payload library
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/): defender-perspective reference
+- [GTFOBins](https://gtfobins.github.io/): Unix binaries for privilege escalation
+- [LOLBAS](https://lolbas-project.github.io/): Windows living-off-the-land binaries
+- [CTF Field Guide](https://trailofbits.github.io/ctf/): introductory CTF methodology
 
 ## Personal notes
 
