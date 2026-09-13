@@ -1,35 +1,37 @@
-# Project 2 — Capture the Flag Solution Presentation
+# Project 2 - Capture the Flag Write-Up (Category 6 & 10)
 
-**Course:** CMIT 321 Ethical Hacking  
-**Due:** Week 7 (initial submission), Week 8 (resubmission)  
-**Status:** _planning_
+**Course:** CMIT 321 Ethical Hacking
+**Status:** Complete
 
-## Assignment summary
+## About this folder
 
-Present your CTFs to your team and give feedback to teammates. The project is supported by two ongoing discussions inside the course:
+This folder originally held planning material for a team CTF solution presentation, which was never completed. It has been replaced with a completed, individual CTF write-up covering Category 6 (Network Captures/Wireless) and Category 10 (Virtual Machines) - ten challenges in total, each solved and validated with screenshots.
 
-- **Collaborative CTF Discussion** (Weeks 4–7) — work with assigned team members to solve more CTF challenges.
-- **CTF Class Presentation / Discussion** (Week 8) — present your CTFs to the class and give feedback to classmates.
+## Assignment Summary
+
+Attempt CTF challenges from the course's challenge bank, document the technique used to solve each one, explain the approach behind two of them in depth, and reflect on strengths, weak areas, and what to improve.
 
 ## Deliverables
 
-- [ ] Presentation outline (presentation-outline.md)
-- [ ] Slide deck or recording reference (link only — binary files are not committed here)
-- [ ] Notes from the Weeks 4–7 collaborative discussion (team-collaboration-notes.md)
-- [ ] Feedback log from the Week 8 class discussion (class-presentation-feedback.md)
-- [ ] Week 8 resubmission (if applicable) with a short change log
+| Deliverable | Status |
+|---|---|
+| 10 challenges attempted and solved (Category 6 + Category 10) | Complete - see `challenges/category-06-network-captures.md` and `challenges/category-10-virtual-machines.md` |
+| In-depth strategy write-up for two challenges | Complete - see `METHODOLOGY.md` |
+| Lessons learned reflection | Complete - see `SECURITY_NOTES.md` |
+| Tools and references | Complete - see `tools-and-resources.md` |
+| Screenshots (`assets/`) | Pending - to be supplied by student |
 
-## Folder contents
+## Folder Contents
 
-| File | Purpose |
-| --- | --- |
-| presentation-outline.md | Section-by-section outline of the team presentation |
-| team-collaboration-notes.md | Running log of collaborative discussion sessions and shared findings |
-| class-presentation-feedback.md | Feedback given to and received from classmates |
-| assets/ | Diagrams, screenshots, or slide exports (redacted) |
+| File / Folder | Purpose |
+|---|---|
+| `challenges/category-06-network-captures.md` | Write-ups for all 7 Category 6 challenges solved (Wireshark packet analysis) |
+| `challenges/category-10-virtual-machines.md` | Write-ups for all 3 Category 10 challenges solved (Linux VM, John the Ripper) |
+| `METHODOLOGY.md` | Deep-dive strategy explanation for two challenges |
+| `SECURITY_NOTES.md` | Strengths, weak areas, struggles, and improvement plan |
+| `tools-and-resources.md` | Tools used and documentation referenced |
+| `assets/` | Screenshots - pending, to be supplied by student |
 
-## Notes on integrity and privacy
+## Notes on Integrity
 
-- Teammate names and personal feedback are kept anonymous in this folder (initials or role only).
-- No CTF flag values, internal team notes, or proprietary course material are committed.
-- Live competition material is paraphrased so the writeup remains useful without leaking solutions.
+No CTF flag values are stated without context, no quiz answer keys, and no copyrighted UMGC course material are reproduced here. This documents method, tooling, and reasoning in the student's own words. Two Category 6 challenges (8-10) in the challenge bank were not attempted due to time; this is noted honestly in `SECURITY_NOTES.md` rather than omitted.
