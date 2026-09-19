@@ -1,3 +1,5 @@
+> **Update:** The current, most advanced build in this repo is the Proxmox + pfSense + Cisco Catalyst segmented network and security lab, documented in full in [network-segmentation-build/](network-segmentation-build/) (README, architecture, build log, and security notes). The write-up below documents an earlier double-NAT / antiX Linux iteration of this project.
+---
 # Cybersecurity Home Lab Project
 
 **Project Start Date:** April 2026  
